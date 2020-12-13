@@ -73,5 +73,14 @@ namespace ADFPipelineLibrary
                     break;
             }
         }
+        public string GetPipelineRunStatus()
+        {
+            Console.WriteLine("Checking pipeline run status...");
+            PipelineRun pipelineRun;
+            pipelineRun = client.PipelineRuns.Get(
+                    resourceGroup, dataFactoryName, runResponse.RunId);
+                Console.WriteLine("Status: " + pipelineRun.Status);
+            return pipelineRun.Status;
+        }
     }
 }
