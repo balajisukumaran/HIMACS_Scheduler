@@ -7,8 +7,8 @@
 
 <h1>Details</h1>
 
-<table class="table">
-    <thead>
+<table class="table table-striped">
+    <thead class="thead-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Jobid)
@@ -29,24 +29,25 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Jobid)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Schedule)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Job)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NextRunDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Jobid)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Schedule)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Job)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NextRunDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

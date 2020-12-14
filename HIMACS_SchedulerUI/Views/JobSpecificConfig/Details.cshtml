@@ -7,8 +7,8 @@
 
 <h1>Details</h1>
 
-<table class="table">
-    <thead>
+<table class="table table-striped">
+    <thead class="thead-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.JobId)
@@ -23,21 +23,22 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.JobId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Key)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Value)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.JobId,key=item.Key }) 
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Key)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Value)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.JobId, key = item.Key })
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
